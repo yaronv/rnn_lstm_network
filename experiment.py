@@ -119,6 +119,7 @@ for epoch in range(EPOCH):
     # if epoch % 5 == 0:
     correct = 0
     total_test = 0
+    model.eval()
     for test_x, test_y in test_loader:
         test_x, test_y = prepare_padded_data(test_x, test_y)
         test_output = model(test_x)                   # (samples, time_step, input_size)
